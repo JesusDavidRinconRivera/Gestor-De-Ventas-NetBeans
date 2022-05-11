@@ -9,7 +9,7 @@ public class Conexion {
     String contraseña = ""; 
     String url = "jdbc:mysql://localhost:3306/gestor-de-inventario";
 
-    public Conexion() {
+    public  Conexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/gestor-de-inventario", "root", "");
@@ -17,6 +17,7 @@ public class Conexion {
         } catch (Exception e) {
             System.err.println("(no conectó esa madre) Error " + e);
         }
+     
     }
 }
 
